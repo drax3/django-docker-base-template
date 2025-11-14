@@ -3,7 +3,7 @@ from .models import CustomUser
 
 class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, required=True)
-    role = serializers.ChoiceField(choices=[("admin", "Admin"),("manager", "Manager"), ("user", "User")])
+    role = serializers.ChoiceField(choices=[("manager", "Manager"), ("user", "User")])
 
     class Meta:
         model =CustomUser
